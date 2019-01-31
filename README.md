@@ -1,3 +1,3 @@
-#holberton-system_engineering-devops
+# holberton-system_engineering-devops
 
-solving basic tasks related to the shell
+Solving tasks related to the shell

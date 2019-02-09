@@ -1,4 +1,4 @@
-[# System engineering & DevOps - Bash](./)
+# System engineering & DevOps - Bash
 
 Solving tasks related to the shell
 

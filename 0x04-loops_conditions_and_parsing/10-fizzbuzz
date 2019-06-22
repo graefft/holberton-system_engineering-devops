@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Script that displays FizzBuzz problem
 
-i=1
+i=0
 while [ $((i++)) -lt 100 ]
 do
 	if ! ((i % 15))

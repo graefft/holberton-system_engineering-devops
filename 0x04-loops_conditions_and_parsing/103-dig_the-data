@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script to sort data from Apache log file by greatest to lowest number of occurrences
+
+awk '{ print $1, $9 }' < apache-access.log | sort | uniq -c | sort -nr

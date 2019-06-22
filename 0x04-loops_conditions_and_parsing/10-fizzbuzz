@@ -1,4 +1,19 @@
 #!/usr/bin/env bash
 # Script that displays FizzBuzz problem
 
-seq 100 | sed '0~3s/.*/Fizz/;0~5s/[0-9]*$/Buzz/'
+i=1
+while [ $((i++)) -lt 100 ]
+do
+	if ! ((i % 15))
+	then
+		echo FizzBuzz
+	elif ! ((i % 3 ))
+	then
+		echo Fizz
+	elif ! ((i % 5))
+	then
+		echo Buzz
+	else
+		echo $i
+	fi
+done

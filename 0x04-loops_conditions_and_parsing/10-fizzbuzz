@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script that displays FizzBuzz problem
+
+seq 100 | sed '0~3s/.*/Fizz/;0~5s/[0-9]*$/Buzz/'

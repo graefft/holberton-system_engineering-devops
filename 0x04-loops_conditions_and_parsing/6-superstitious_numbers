@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-$ Script that displays numbers from 1 to 20 and displays "bad luck from China" after 4, "bad luck from Japan" after 9, and "bad luck from Italy" after 17
+# Script that displays numbers from 1 to 20 and displays "bad luck from China" after 4, "bad luck from Japan" after 9, and "bad luck from Italy" after 17
 
 i=1
 while [ $i -lt 21 ]

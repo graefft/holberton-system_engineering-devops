@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Script that loops from 1 to 10 and displays "bad Luck" for 4th iteration, "good luck" for 8th iteration, and "Holberton School" for the other iterations
+
+i=1
+while [ $i -lt 11 ]
+do
+	if [ $i -eq 4 ]
+	then
+		echo "bad luck"
+	elif [ $i -eq 8 ]
+	then
+		echo "good luck"
+	else
+		echo "Holberton School"
+	fi
+	((i++))
+done

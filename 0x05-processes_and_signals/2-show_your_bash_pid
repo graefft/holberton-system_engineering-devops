@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script displays lines from ps aux containing 'bash'
+
+ps aux | grep bash

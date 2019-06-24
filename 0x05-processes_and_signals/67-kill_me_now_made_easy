@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script exits '7-highlander' using pkill
+
+pkill -f 7-highlander 

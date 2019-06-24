@@ -3,6 +3,8 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+int infinite_while(void);
+
 /**
  * main - creates 5 zombie processes
  * Return: 0

@@ -11,41 +11,17 @@ int infinite_while(void);
  */
 int main(void)
 {
+	int i;
 	pid_t pid;
 
-	pid = fork();
-	if (pid == 0)
+	for (i = 0; i < 5; i++)
 	{
-		printf("Zombie process created, PID: %d\n", getpid());
-		exit(0);
-	}
-
-	pid = fork();
-	if (pid == 0)
-	{
-		printf("Zombie process created, PID: %d\n", getpid());
-		exit(0);
-	}
-
-	pid = fork();
-	if (pid == 0)
-	{
-		printf("Zombie process created, PID: %d\n", getpid());
-		exit(0);
-	}
-
-	pid = fork();
-	if (pid == 0)
-	{
-		printf("Zombie process created, PID: %d\n", getpid());
-		exit(0);
-	}
-
-	pid = fork();
-	if (pid == 0)
-	{
-		printf("Zombie process created, PID: %d\n", getpid());
-		exit(0);
+		pid = fork();
+		if (pid == 0)
+		{
+			printf("Zombie process created, PID: %d\n", getpid());
+			exit(0);
+		}
 	}
 
 	infinite_while();

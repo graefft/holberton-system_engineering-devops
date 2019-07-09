@@ -5,6 +5,7 @@ Solved tasks from Holberton School's System Engineering & DevOps curriculum
 
 ### Files Used in This Project
 FILE | DESCRIPTION
+----|----
 [0. OSI Model](./0-OSI_model) | Answer file for how is OSI model organized?
 [1. Types of Network](./1-types_of_network) | Answers for network questions
 [2. MAC and IP address](./2-MAC_and_IP_address) | Answers for address questions

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Installs NGINX and creates redirection
+apt-get update
+apt-get -y install nginx
+sed -i '/listen \[::]:80 default_server;/a rewrite ^/redirect_me/ https://www.youtube.com/watch?v=C02M0bd53AM permanent;' /etc/nginx/sites-available/default
+service nginx start

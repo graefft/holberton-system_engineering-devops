@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 #Installs HAproxy and sets up load balancer with round-robin
-apt-get update
+apt-get -y update
 apt-get -y install haproxy
-echo "frontend
+echo "frontend 676sf.tech
     bind *:80
     mode http
     default_backend web_servers
 
 backend web_servers
     balance roundrobin
-    server 676-web-01 35.237.137.208:80 check
-    server 676-web-02 34.74.82.54:80 check" >> /etc/haproxy/haproxy.cfg
-service haproxy start
+    server web-01 35.237.137.208:80 check
+    server web-02 34.74.82.54:80 check\n" >> /etc/haproxy/haproxy.cfg
+service haproxy restart

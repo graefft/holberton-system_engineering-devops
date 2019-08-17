@@ -9,6 +9,6 @@ echo "frontend
 
 backend web_servers
     balance roundrobin
-    server 676-web-01 35.237.137.208:80
-    server 676-web-02 34.74.82.54:80" >> /etc/haproxy/haproxy.cfg
+    server 676-web-01 35.237.137.208:80 check
+    server 676-web-02 34.74.82.54:80 check" >> /etc/haproxy/haproxy.cfg
 service haproxy start

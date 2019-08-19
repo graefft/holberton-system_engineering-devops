@@ -11,7 +11,8 @@ Solved tasks from Holberton School's System Engineering & DevOps curriculum
 **OS:** Ubuntu 14.04
 
 
-### FILE | DESCRIPTION
+### FILES USED IN THIS PROJECT
+FILE | DESCRIPTION
 ----|----
 [0. Double the Number of Webservers](./0-custom_http_repsonse-header) | Configures brand new Ubuntu machine to add a custom Nginx response header
 [1. Install Your Load Balancer](./1-install_load_balancer) | Installs and configures HAproxy on load balancer (lb-01) server

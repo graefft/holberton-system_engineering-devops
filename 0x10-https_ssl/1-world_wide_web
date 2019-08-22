@@ -3,13 +3,15 @@
 
 subdomain_function ()
 {
-    dig_line=$(dig "$2.$1" | grep -A1 "ANSWER SECTION:" | tr -d '\n')
-    echo "$2 $dig_line" | awk '{print "The subdomain " $1 " is a " $8 " record and points to " $9}'
+    record=( $(dig "$2.$1" | awk '/;; ANSWER SECTION:/{getline; print $4,$5}') )
+    sub=${record[0]}
+    destination=${record[1]}
+    echo "The subdomain $2 is a $sub record and points to $destination"
 }
 
-if [ "$#" -eq 2 ]; then
+if [ $# -eq 2 ]; then
     subdomain_function "$1" "$2"
-elif [ "$#" -eq 1 ]; then
+elif [ $# -eq 1 ]; then
     subdomain_function "$1" www
     subdomain_function "$1" lb-01
     subdomain_function "$1" web-01

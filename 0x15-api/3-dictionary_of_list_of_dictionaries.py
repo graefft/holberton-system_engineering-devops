@@ -15,7 +15,7 @@ if __name__ == '__main__':
     for task in user_list:
         data[task['id']] = []
         for todo in todo_list:
-            if todo['userId'] == user['id']:
+            if todo['userId'] == task['id']:
                 data[task['id']].append({'task': todo['title'],
                                          'completed': todo['completed'],
                                          'username': task['username']})

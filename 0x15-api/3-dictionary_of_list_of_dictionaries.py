@@ -15,8 +15,9 @@ if __name__ == '__main__':
     for task in user_list:
         data[task['id']] = []
         for todo in todo_list:
-            data[task['id']].append({'task': todo['title'],
-                                     'completed': todo['completed'],
-                                     'username': task['username']})
+            if todo['userId'] == user['id']:
+                data[task['id']].append({'task': todo['title'],
+                                         'completed': todo['completed'],
+                                         'username': task['username']})
     with open(file_name, 'w') as f:
         json.dump(data, f)

@@ -12,11 +12,11 @@ if __name__ == '__main__':
     file_name = 'todo_all_employees.json'
     data = {}
 
-    for task in todo_list:
+    for task in user_list:
         data[task['id']] = []
         for todo in todo_list:
-            data[task['id']].append({'task': task['title'],
-                                     'completed': task['completed'],
-                                     'username': user_name})
+            data[task['id']].append({'task': todo['title'],
+                                     'completed': todo['completed'],
+                                     'username': task['username']})
     with open(file_name, 'w') as f:
         json.dump(data, f)
